@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Neucha&display=swap");
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    color: $color-grey-dark-1;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+
+    &--main {
+        display: block;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 8rem;
+        letter-spacing: 0.75rem;
+
+        animation-name: dont-move;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+
+        @include respond(tab-port) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+        @include respond(desktop) {            
+            font-size: 8.5rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &--subtitle {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.25rem;
+
+        animation-name: move-in-top;
+        animation-duration: 1.25s;
+        animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+
+        @include respond(tab-port) {           
+            font-size: 1.75rem;
+        }
+        @include respond(desktop) {           
+            font-size: 2.25rem;           
+        }
+    }
+}
+
+.heading-secondary {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    // on met un font en dégradé sur le h2, elle va de gauche à droite
+    background-image: linear-gradient(to right, $color-forest-green-3, $color-forest-green-5);
+    // nous voulons maintenant que le dégradé ne contienne que le titre
+    // nous utilisons background clip : text, ie le background est découpé là où se trouve le texte
+    -webkit-background-clip: text;
+    // nous mettons la couleur a transparent pour que nous puissons voir le dégradé linéaire d'arrière plan
+    color: transparent;
+    letter-spacing: 0.2rem;
+    transition: all 0.2s;
+    text-align: center;
+
+    @include respond(tab-port) {           
+        font-size: 2.75rem;
+    }
+
+    @include respond(desktop) {           
+        font-size: 3.75rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {           
+        font-size: 1.75rem;
+    }
+
+    @include respond(desktop) {           
+        font-size: 2.25rem;
+    }
+}
+
+.heading-quaternary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+
+    
+}
+
+.paragraph {
+    text-align: justify;
+
+    @include respond(desktop) {           
+        font-size: 1.8rem;
+    }
+}
+
+#city,
+#temperature__label,
+#city__description,
+.city__localisation {
+    color: $color-white;
+    font-family: "Neucha", cursive;
+    line-height: 1.2;
+}
+
+.heading-meteo {
+    color: $color-white;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+#city {
+    font-size: 3rem;
+
+}
+
+#temperature__label,
+#city__description,
+.city__localisation {
+    font-size: 1.75rem;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+}

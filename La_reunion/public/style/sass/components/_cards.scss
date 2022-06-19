@@ -1,0 +1,121 @@
+.cards__position {
+    @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    @include respond(desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 2rem 5rem rgba($color-black, 0.15);
+        margin-top: 5rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        @include respond(tab-port) {            
+            width: 40rem;
+        }
+        @include respond(desktop) {
+            width: 40rem;
+            margin: 2.5rem 5rem;
+
+            &:hover {
+                transition: transform 0.3s;
+                transform: scale(1.05);
+            }
+        }
+
+        // avec clip-path on spécifie un polygone dans lequel l'élément sera toujous visible
+        // on va définir un groupe de coordonnées qui définissent ce polygone
+        // polygon (x y, x y, x y, x y, );
+        // on commence en haut à gauche et tournons dans le sens de l'aiguille d'une montre
+        // d'abord, nous ne déplaçons rien en haut à gauche, x y vaut 0
+        // ensuite on déplace x à 100%, y à 0
+        // puis, nous sommmes déjà a 100% par rapport à la base de x et nous mettons y à 85%
+        // enfin x revient à sa valeur de départ et y reste à 100%
+        &__img {
+            background-size: cover;
+            height: 20rem;
+            width: 100%;
+            background-blend-mode: screen;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+            &--1 {
+                background-image: url(../../assets/img/paraglider-640.jpg);
+            }
+
+            &--2 {
+                background-image: url(../../assets/img/volcano-534.jpg);
+            }
+
+            &--3 {
+                background-image: url(../../assets/img/canyoning-466.jpg);
+            }
+        }
+
+        &__infos {
+            padding: 1rem 3rem 2.5rem 3rem;
+            width: 100%;
+
+            ul {
+                list-style: none;
+
+                li {
+                    text-align: center;
+                    padding: 1rem;
+                }
+            }
+        }
+
+        &__cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 20rem;
+            width: 100%;
+            padding: 2.5rem;
+            -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+
+            &--1 {
+                background-image: linear-gradient(to right top, $color-skyblue, $color-skyblue-dark);
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right top, $color-volcano-1, $color-volcano-6);
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right top, $color-rock-2, $color-rock-6);
+            }
+        }
+
+        &__price-box {
+            text-align: center;
+            color: $color-white;
+        }
+
+        &__price-reduc {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.15rem 3.5rem;
+        border-radius: 10rem; 
+        font-size: 1.4rem;
+     
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark-1;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        border: none;
+        color:$color-white;
+        background-image: linear-gradient(to right, $color-forest-green-3, $color-forest-green-5);
+    }
+}    
+
+
+
+
+
+
+// BEACH
+// .btn-grad {
+//     background-image: linear-gradient(to right, #22c1c3 0%, #fdbb2d 50%, #22c1c3 100%);
+// }
+// .btn-grad {
+//     margin: 10px;
+//     padding: 15px 45px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     transition: 0.5s;
+//     background-size: 200% auto;
+//     color: white;
+//     box-shadow: 0 0 20px #eee;
+//     border-radius: 10px;
+//     display: block;
+//     width: 200px;
+//     height: 25px;
+// }
+
+// .btn-grad:hover {
+//     background-position: right center; /* change the direction of the change here */
+//     color: #fff;
+//     text-decoration: none;
+// }
+
+
+
+// VOLCANO
+
+// .btn-grad {background-image: linear-gradient(to right, #fe8c00 0%, #f83600  51%, #fe8c00  100%)}
+// .btn-grad {
+//    margin: 10px;
+//    padding: 15px 45px;
+//    text-align: center;
+//    text-transform: uppercase;
+//    transition: 0.5s;
+//    background-size: 200% auto;
+//    color: white;            
+//    box-shadow: 0 0 20px #eee;
+//    border-radius: 10px;
+//    display: block;
+//    width: 200px;
+//     height: 25px;
+//  }
+
+//  .btn-grad:hover {
+//    background-position: right center; /* change the direction of the change here */
+//    color: #fff;
+//    text-decoration: none;
+//  }
+
+
+// FOREST
+
+// background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+
+.btn-grad {
+    background-image: linear-gradient(to right, rgba(12,116,117,1) 0%, rgba(14,174,87,1) 50%, rgba(12,116,117,1) 100%);
+}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    width: 200px;
+    height: 45px;
+    
+}
+
+.btn-grad:hover {
+    background-position: right; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

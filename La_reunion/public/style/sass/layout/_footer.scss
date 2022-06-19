@@ -1,0 +1,25 @@
+.footer {
+    
+    height: 30vh;
+    background-color: $color-grey-dark-4;
+    padding: 8rem;
+
+    &__logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;      
+    }
+
+    &__link {
+        margin: 0 4rem;
+            display: block;
+    }
+
+    &__img {
+        width: 40px;
+        height: 40px;
+        filter: invert(1);
+    }
+
+}

@@ -1,0 +1,34 @@
+.form {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        align-items: center;
+    }    
+
+    &__label {
+        display: none;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        padding: 2rem;
+        border-radius: 0.3rem;
+        background-color: rgba($color-white, 0.85);
+        border: none;
+        display: block;
+        margin-top: 1rem;
+        width: 100%;
+
+        @include respond(tab-port) {
+            width: 30rem;
+        }
+        @include respond(desktop) {
+            width: 50rem;
+        }
+    }
+}

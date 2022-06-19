@@ -1,0 +1,30 @@
+.header__arrows {
+    width: 6rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    path {
+        stroke: $color-white;
+        fill: transparent;
+        stroke-width: 1px;
+        animation: arrows 2s infinite;
+        -webkit-animation: arrows 2s infinite;
+    }
+    .header__arrow--1 {
+        animation-delay: -1s;
+        -webkit-animation-delay: -1s;
+    }
+
+    .header__arrow--2 {
+        animation-delay: -0.5s;
+        -webkit-animation-delay: -0.5s;
+    }
+
+    .header__arrow--3 {
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+    }
+}

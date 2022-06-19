@@ -1,0 +1,42 @@
+.adventure {
+    margin-top: 2.5rem;
+
+    &__paragraph {
+        margin-top: 2.5rem;
+        @include respond(desktop) {
+            margin: 5rem 0;
+        }
+    }
+
+    &__photos {
+        margin-top: 1.5rem;
+
+        @include respond(desktop) {            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        [class^="adventure__photos--"] {
+            width: 100%;
+            margin-top: 1.75rem;
+            border-radius: 0.3rem;
+
+            @include respond(tab-port) {
+                width: 80%;
+            }
+
+            @include respond(desktop) {
+                width: 25%;
+                height: 100%;
+            }
+        }
+    }
+    @include respond(tab-port) {
+        text-align: center;
+        padding: 0 6rem;
+    }
+    @include respond(desktop) {
+        padding: 0 10rem;
+    }
+}
